@@ -1,1 +1,8 @@
-echo "Husky pre-commit hook"
+echo "Running tests..."
+
+echo "Running bime format and automatically formatting the code..."
+npx @biomejs/biome format --write .  # Automatically format the code
+
+# Biome check 
+echo "Running Bime check and automatically fixing the code..."
+npx @biomejs/biome check --write . # Automatically fix the code
