@@ -1,9 +1,15 @@
-import "./index.css";
+import { Toaster } from "@/components/ui/sonner";
+import Flayer from "./components/flayer";
+import Navbar from "./components/navbar";
+import BooksSection from "./components/books-sections";
 
 function App() {
   return (
     <div>
-      <h1>Hello</h1>
+      <Toaster />
+      <Navbar />
+      <Flayer />
+      <BooksSection />
     </div>
   );
 }
