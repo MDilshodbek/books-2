@@ -117,7 +117,7 @@ const Flayer: FC = () => {
           </Carousel>
         </div>
       </div>
-      <div className="flex items-center justify-between h-[202px] mt-4 text-[#107FE4]">
+      <div className="flex items-center justify-between h-[202px] mt-[40px] text-[#107FE4]">
         <div className="w-[288px] h-full px-[24px] py-4 bg-[#107FE41A] rounded-lg flex flex-col">
           <img className="w-[48px] mb-[16px]" src="icons/fast.png" alt="" />
           <h3 className="text-[24px] font-bold">Yetkazib berish</h3>
