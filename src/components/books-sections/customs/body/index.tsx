@@ -1,5 +1,11 @@
+import Card from "./customs/card";
+
 const Body = () => {
-  return <div>Body</div>;
+  return (
+    <div>
+      <Card />
+    </div>
+  );
 };
 
 export default Body;
