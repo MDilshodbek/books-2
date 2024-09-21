@@ -6,6 +6,8 @@ import MobileApp from "./components/mobile-app";
 import Statistics from "./components/statistics";
 import News from "./components/news";
 import WeeklyReccomend from "./components/weekly-recommend";
+import Promo_books from "./components/promo-books";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -15,9 +17,11 @@ function App() {
       <Flayer />
       <BooksSection />
       <WeeklyReccomend />
+      <Promo_books />
       <MobileApp />
       <Statistics />
       <News />
+      <Footer />
     </div>
   );
 }

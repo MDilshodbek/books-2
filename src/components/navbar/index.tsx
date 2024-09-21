@@ -30,11 +30,11 @@ const Navbar: FC = () => {
   const [language, setLanguage] = React.useState("Uz");
 
   return (
-    <div className="w-[80%] m-auto flex flex-col gap-4">
+    <div className="w-[80%] m-auto flex flex-col gap-4 mt-[24px]">
       <div className="flex items-end justify-between h-[59px] w-full">
         <div className="flex items-end gap-[26px]">
           <img
-            src={"icons/mainIcon.png"}
+            src={"icons/mainIcon.svg"}
             alt="Logo"
             className="cursor-pointer"
           />
