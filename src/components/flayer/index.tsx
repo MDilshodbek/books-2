@@ -8,9 +8,15 @@ import {
 import { Heart, ShoppingBag, User } from "lucide-react";
 import type { FC } from "react";
 import { toast } from "sonner";
+import { Dialog } from "../ui/dialog";
+import { DialogTrigger } from "@radix-ui/react-dialog";
+import AuthDialog from "./auth-dialog";
+import useIsAuthenticated from "react-auth-kit/hooks/useIsAuthenticated";
 import { Button } from "../ui/button";
 
 const Flayer: FC = () => {
+  const isAuthenticated = useIsAuthenticated();
+
   return (
     <div className="w-[80%] m-auto mt-4">
       <div className="flex justify-between items-center">
@@ -48,10 +54,21 @@ const Flayer: FC = () => {
             <Heart />
             <h4>Sevimlilar</h4>
           </div>
-          <div className="flex gap-2 cursor-pointer">
-            <User />
-            <h4>Profil</h4>
-          </div>
+          {isAuthenticated ? (
+            <Button className="flex gap-2" variant={"outline"}>
+              User
+            </Button>
+          ) : (
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="flex gap-2 cursor-pointer">
+                  <User />
+                  <h4>Profil</h4>
+                </div>
+              </DialogTrigger>
+              <AuthDialog />
+            </Dialog>
+          )}
         </div>
       </div>
       <div className="flex gap-4 h-[488px] mt-4">
